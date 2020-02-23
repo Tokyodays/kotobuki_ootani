@@ -1,0 +1,50 @@
+ var dacy1 = {};
+ dacy1.getCurrentScript = function(partSrcURL) { if("undefined" === typeof document.currentScript) { var scripts = document.getElementsByTagName('script');
+ for (var i = 0; i < scripts.length; i++)
+ if (scripts[i].src.indexOf( partSrcURL ) > -1) return scripts[i];
+ return undefined;
+ } else {
+ return document.currentScript;
+ }
+ };
+
+dacy1.createFIF = function(width, height) {
+ var iframe = document.createElement('iframe');
+ var fifStyle = "border: 0; width: " + width + "px; height: " + height + "px;";
+ iframe.setAttribute('style', fifStyle);
+ iframe.setAttribute('frameBorder', '0');
+ iframe.setAttribute('scrolling', 'no');
+ iframe.src = "javascript:false";
+ return iframe;
+};
+
+dacy1.showAd = function(width, height, actualAD, impURL) {
+ var iframe = dacy1.createFIF(width, height);
+ var where = dacy1.getCurrentScript(impURL);
+ where.parentNode.insertBefore(iframe, where);
+ var doc = iframe.contentWindow ? iframe.contentWindow.document : iframe.contentDocument;
+
+ actualAD = '<body style="background:transparent;margin:0;"><script>var inDapIF = true;</script>' + actualAD + '</body>';
+
+ if (navigator.userAgent.indexOf('Firefox') !== -1){
+ doc.open('text/html', 'replace');
+ }
+
+ doc.write(actualAD);
+ // Opera non-webkit won't write all inside scripts if closed
+ // this is not good, but important.
+ if ( navigator.userAgent.indexOf('Opera') == -1 ){
+ doc.close();
+ }
+};
+
+var width  = 300,
+ height = 250,
+ adSnippet = '<a href=\"https:\/\/y.one.impact-ad.jp\/clk\/4BmMnfTI-c0WaMi5j.aZOIlK4BKCmiVYb4N0QJUYfChdyqBw16ucYABxKYEAVrgEAkgBum9Oim3cnrZDeZgppg8qaJDjzyVSQWveLpaOI4cLO5HeZ4QCwZsP6QYWmHiVM8yEh.Vx24kQ3n4rzbhmCo3nVMm7lUTLfLgez7JnsTXgj2DXkIEeS3BOhHbyf5R8WhJNKtkKaM9cs3VluJwEIHIpzbaaTkFm2mD734VHGqAhNHRX7PEJ6MKBVU8IRJR1n3VL-7uiCqU1bbZuJQXLDlElX-j697iWUsd23kVEAM0iBPIBDrqyWkuEfANrS6zggQAnkGP.ZXbW2wnh0801qnRewfbkYYhL2hTFNMMtqrzTx0ZxmQDxLdoWrmhye5quDFdNcht4REcKrsI0WPt0yAEdORBu0KgcyaH79.xji9RkjrzcdXHcNVpvVWvRNjKUB4ZLUuZ4ZTewx2c0CLYaqZl-7PbjXCTPgjz1TgD0.nTLY7zAKKbggx6Z9FTzPZhpeCAD.SIZbVdzl4aTVTGDu2JAZZDZWegGrWLyrz3FGtYYsmm0ZGZgi7i-LYWCPUnRFCrPTd-nrhlJnqu-oQk7fcLWARnbDcHA.CQZuT-xCqMH5QR-crzTblVJE1l8L5uNARg=\/\/\/\/tenshoku.nikkei.co.jp\/\" target=\"_blank\" ><img src=\"\/\/a248.e.akamai.net\/f\/248\/45380\/60m\/dac1.download.akamai.com\/45379\/yo\/3305\/201803\/【新規】170901EXnk_pc_rc_bn075_10020_N-Recte0f6981a145da72ea1140af29741abf8.jpg\" BORDER=\"0\"><\/a>',
+ srcPart   = '/imp?p=45726&w=300&h=250&t=async';
+
+dacy1.showAd(width,height,adSnippet,srcPart);
+
+
+(new Image()).src = "https://s.amazon-adsystem.com/dcm?pid=d3712b9d-6998-4ead-b82d-ef4a3874ea1b&id=07e12d08-29b5-4ab0-9c7c-0363fb3bdd4d";
+(new Image()).src = "//cm.g.doubleclick.net/pixel?google_nid=yieldone_eb&google_hm=B-EtCCm1SrCcfANj-zvdTQ";

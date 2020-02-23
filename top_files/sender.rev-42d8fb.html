@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.nikkei.com/.resources/tracking/static/sender.rev-42d8fb.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body>
+  <script type="text/javascript" async="" src="./js"></script><script type="text/javascript" async="" src="./analytics.js"></script><script type="text/javascript" src="./js(1)"></script><script>
+    // Get context data from parent global variable
+    var rnTrackVars = window.parent.rnTrackVars || {};
+  </script>
+  <!-- Atlas Tracking JS -->
+  <script src="./atj.min.rev-fcc89f.js"></script>
+  <script src="./c2p.rev-9e4e1e.js"></script>
+
+  <!-- usergram tracking -->
+  <script type="text/javascript">
+    (function() {
+      var w = window.parent;
+      if (!w.rnFlags || !w.rnFlags.usergramEnabled) {
+        return;
+      }
+      var sidary = document.cookie.split("; ");
+      var sidstr = "";
+      i = 0;
+      while (sidary[i]){
+        if (sidary[i].substr(0,18) == "NID-Serial-Cookie="){
+          sidstr = sidary[i].substr(18,sidary[i].length);
+          break;
+        }
+        i++;
+      }
+
+      // Currently we will track by usergram only for user which has last serial id is 0 or 1.
+      var serialId = parseInt(sidstr, 10);
+      if (isNaN(serialId) || ((serialId % 10) !== 0 && (serialId % 10) !== 1)) {
+        console.log("Serial Id is not a target for usergram", serialId);
+        return;
+      }
+
+      w.ugattr = w.ugattr || {};
+      w.ugattr['serviceId'] = sidstr;
+      (function () {
+        var a = w, b = a.document, c = a.usergram = a.usergram || [], d, e;
+        c.l || (c.s = (new Date()).getTime(), c.l = !0, d = b.getElementsByTagName('script')[0],
+          e = b.createElement('script'), e.type = 'text/javascript', e.async = true,
+          e.src = '//code.usergram.info/js/usergram.js', d.parentNode.insertBefore(e, d))
+      })();
+      w.usergram = w.usergram || [], w.ugattr = w.ugattr || {};
+      if (!rnTrackVars.doNotSendPageViewOnLoad) {
+        w.usergram.push(['send', 'UgAW8r-1', 'pv', w.ugattr]);
+      }
+    })();
+  </script>
+
+  <!-- Link Tracking -->
+  <script>
+    window.addEventListener("message", function(event) {
+      var data = event.data;
+      if (data.name === 'rnikkei-tracking') {
+        if (data.updateContext) {
+          updateContext();
+        }
+        atlasTracking.trackAction(data.action, data.category, data.events, data.options);
+      } else if (data.name === 'rnikkei-tracking-pv') {
+        sendAtlasPageView();
+        var w = window.parent;
+        if (w.usergram) {
+          w.ugattr = w.ugattr || {};
+          w.usergram.push(['send', 'UgAW8r-1', 'pv', w.ugattr]);
+        }
+      } else if (data.name === 'google-analytics') {
+        gtag('event', data.action, {
+          event_category: data.category,
+          event_label: data.label,
+        })
+      }
+      const targetOrigin = location.protocol + '//' + location.hostname + ':' + location.port;
+      window.parent.postMessage({name: 'rnikkei-tracking-processed', id: data.id}, targetOrigin);
+    });
+  </script>
+
+  <!-- google analytics -->
+  <script>
+    (function(){var a=document,b=a.createElement('script'),c=a.getElementsByTagName('script')[0];b.type='text/javascript',b.src='https://www.googletagmanager.com/gtag/js?id=UA-142388021-1',c.parentNode.insertBefore(b,c)})()
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-142388021-1', {
+      linker: {
+        domains: ['www.nikkei.com', 'r.nikkei.com', 'id.nikkei.com', 'regist.nikkei.com', 'pr.nikkei.com']
+      },
+      page_title: window.parent.document.title,
+      page_location: window.parent.location.href,
+      user_id: atlasTracking.getCookieValue('NID-Serial-Cookie'),
+      custom_map: {
+        dimension14: 'serial_id',
+        dimension15: 'atlas_id',
+        dimension16: 'ds_user_status',
+        dimension17: 'is_dsr3',
+        dimension19: 'category',
+        dimension20: 'sub_category',
+        dimension21: 'is_article',
+        dimension22: 'article_id',
+        dimension23: 'article_title',
+        dimension24: 'article_genre',
+        dimension26: 'referrer',
+      },
+      serial_id: atlasTracking.getCookieValue('NID-Serial-Cookie'),
+      atlas_id: atlasTracking.getCookieValue('atlasId'),
+      ds_user_status: rnTrackVars.userRank,
+      is_dsr3: rnTrackVars.userRank === "4",
+      category: rnTrackVars.category.level2.name && rnTrackVars.category.level2.name.substring(3),
+      sub_category: rnTrackVars.category.level3.name && rnTrackVars.category.level3.name.substring(3),
+      is_article: rnTrackVars.app === 'article',
+      article_id: rnTrackVars.contentId,
+      article_title: rnTrackVars.contentName,
+      article_genre: rnTrackVars.contentGenre,
+      referrer: window.parent.document.referrer,
+    });
+  </script>
+
+
+
+
+
+</body></html>

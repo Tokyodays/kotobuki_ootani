@@ -1,0 +1,1 @@
+var s={};s.t=function(){return false;};s.tl=function(){return false;};s.getQueryParam=function(dummy){return false;};

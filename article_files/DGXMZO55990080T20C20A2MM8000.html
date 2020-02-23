@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0071)https://evernote.nikkei.com/iframe/related/DGXMZO55990080T20C20A2MM8000 -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Nikkei x Evernote</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="https://evernote.nikkei.com/iframe/related/media/images/favicon.ico">
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <!--[if lt IE 9]>
+        <script src="/media/lib/html5shiv/html5shiv.js"></script>
+        <![endif]-->
+        <script src="./jquery.js"></script>
+        <script src="./bootstrap.js"></script>
+        <script src="./knockout.js"></script>
+        <script src="./underscore.js"></script>
+    <script type="text/javascript">
+        var PARENT_WINDOW = (parent && parent.postMessage ? parent : (parent && parent.document.postMessage ? parent.document : undefined));
+    </script></head>
+    
+    <body>
+        
+
+<link href="./related.css" rel="stylesheet" media="screen">
+<script type="text/template" id="loader-template">
+    <div id="loading">
+        <div class="loader">
+            <img src="/media/img/iframe/loading.gif" alt="" />
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    var KIJI_ID = "DGXMZO55990080T20C20A2MM8000";
+    var userAgent = window.navigator.userAgent.toLowerCase();
+    if (userAgent.indexOf('msie') != -1) {
+        var option = 'menubar=no, height=500, width=1019, resizable=1, scrollbars=1';
+    } else {
+        var option = 'menubar=no, height=500, width=400, resizable=1, scrollbars=1';
+    }
+    var URL =  '/' 
+    var openWindow = function() {
+        var pop = window.open(URL, 'Evernote', option);
+        var pollingPopWindow = function () {
+            if (pop.closed) {
+                clearInterval(timer);
+                window.location.reload();
+            }
+        };
+        var timer = setInterval(pollingPopWindow, 500);
+    }
+</script>
+<script src="./jquery.xdomainrequest.min.js"></script>
+<script src="./notes_view_model.js"></script>
+
+<div class="en-notes">
+    <div class="header">
+        <h1 class="header-title">
+            <a href="https://evernote.com/intl/jp/" target="_blank" class="header-title-logo"><img src="./evernote_logo.png" width="116" alt="Evernote"></a>
+            <span class="header-title-text">関連ノート <span class="header-description">Evernote連携をすると記事に関連したノートが表示されます。</span> </span>
+        </h1>
+        <p class="header-utility">
+            <a href="https://evernote.nikkei.com/iframe/related/DGXMZO55990080T20C20A2MM8000#" class="cmn-button" onclick="openWindow();">
+            設定する
+            </a>
+            <a href="http://pr.nikkei.com/guide/evernote/?n_cid=EVERN002&amp;waad=PqZtvBUq" target="_blank" class="cmn-button cmn-button-help"><span>ガイド</span></a>
+        </p>
+    </div>
+    <!-- ko if: notes().length > 0 --><!-- /ko -->
+    <!-- ko if: error() != null --><!-- /ko -->
+</div>
+
+
+        <footer>
+        </footer>
+    
+</body></html>

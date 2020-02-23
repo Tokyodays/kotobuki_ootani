@@ -1,0 +1,50 @@
+ var dacy1 = {};
+ dacy1.getCurrentScript = function(partSrcURL) { if("undefined" === typeof document.currentScript) { var scripts = document.getElementsByTagName('script');
+ for (var i = 0; i < scripts.length; i++)
+ if (scripts[i].src.indexOf( partSrcURL ) > -1) return scripts[i];
+ return undefined;
+ } else {
+ return document.currentScript;
+ }
+ };
+
+dacy1.createFIF = function(width, height) {
+ var iframe = document.createElement('iframe');
+ var fifStyle = "border: 0; width: " + width + "px; height: " + height + "px;";
+ iframe.setAttribute('style', fifStyle);
+ iframe.setAttribute('frameBorder', '0');
+ iframe.setAttribute('scrolling', 'no');
+ iframe.src = "javascript:false";
+ return iframe;
+};
+
+dacy1.showAd = function(width, height, actualAD, impURL) {
+ var iframe = dacy1.createFIF(width, height);
+ var where = dacy1.getCurrentScript(impURL);
+ where.parentNode.insertBefore(iframe, where);
+ var doc = iframe.contentWindow ? iframe.contentWindow.document : iframe.contentDocument;
+
+ actualAD = '<body style="background:transparent;margin:0;"><script>var inDapIF = true;</script>' + actualAD + '</body>';
+
+ if (navigator.userAgent.indexOf('Firefox') !== -1){
+ doc.open('text/html', 'replace');
+ }
+
+ doc.write(actualAD);
+ // Opera non-webkit won't write all inside scripts if closed
+ // this is not good, but important.
+ if ( navigator.userAgent.indexOf('Opera') == -1 ){
+ doc.close();
+ }
+};
+
+var width  = 300,
+ height = 250,
+ adSnippet = '<a href=\"https:\/\/y.one.impact-ad.jp\/clk\/SsnDOhGyRno.igQWbgYEII0IURiNUeO1VUjHhHW7LUYM8cZEUS7RCl1SXQWrW5gzGgOG3ChMN9gNgekUJ2aXly3lLDRCMbpDedsuK5jqbH8qoGrR8bkvnL5Pno8pmBs1CxOWGYBfT8764BAf5uLBvj1RO6mzrI162dqfD1pQAjTv95xEM.nFJz269qjFz4geKZUWlPzXrKBLqKOLQMGUwVa6NBkcFNTdIJJGIhd3WWbhyVAM9LWIdkAxpegGtDFIIMcryb0PLefSWA56X-KFN7hkxfMMbFoQP.K6FRTziwCj-eu1X5is2DruaA3j.1gq2pX2-MsXvKNy0snLS2pn8E30.RzzxzTFGzDNSxvOW83B5aGg4DApQTkutimOndS9487ffqPY4a7kn.vmG4rSqGPvdftwvYGnWTyzi7LjyygtAcE4p5Wyzc.5FCaazapEPmI1W52gPG3sY8W-VKi1P.PDG4l9OIVOVx8SHTwKQIEC-PTvBqamSS82JIS7xZurKALKfC3LHRnA4nNFGrXQf-i6XB7.t-Q3rJlqePYeMj7crOsLdlOtX3UQLth6c0H1hmW-.OmxlL5.mGjrNg==\/\/\/\/school.nikkei.co.jp\/?waad=AHDMXHvw\" target=\"_blank\" ><img src=\"\/\/a248.e.akamai.net\/f\/248\/45380\/60m\/dac1.download.akamai.com\/45379\/yo\/3305\/201803\/【新規】180401NBS-brand-Rect0c5b6bc1a1f615d7b103657ff33c715a.jpg\" BORDER=\"0\"><\/a>',
+ srcPart   = '/imp?p=45726&w=300&h=250&t=async';
+
+dacy1.showAd(width,height,adSnippet,srcPart);
+
+
+(new Image()).src = "https://s.amazon-adsystem.com/dcm?pid=d3712b9d-6998-4ead-b82d-ef4a3874ea1b&id=07e12d08-29b5-4ab0-9c7c-0363fb3bdd4d";
+(new Image()).src = "//cm.g.doubleclick.net/pixel?google_nid=yieldone_eb&google_hm=B-EtCCm1SrCcfANj-zvdTQ";
