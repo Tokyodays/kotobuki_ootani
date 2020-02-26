@@ -2,7 +2,7 @@
 <!-- saved from url=(0060)https://www.nikkei.com/article/DGXMZO55990080T20C20A2MM8000/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr" id="R3">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">]
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="ja">
 
 <meta http-equiv="Content-Style-Type" content="text/css; charset=UTF-8">
@@ -35,7 +35,7 @@
 <meta name="msApplication-ID" content="AE156C3D.494F24E3">
 <meta name="msApplication-PackageFamilyName" content="AE156C3D.494F24E3_drw2bfqyhqxtg">
 <meta name="info003" content="true">
-<title>内閣支持46%、不支持47%で拮抗　日経世論調査　　:日本経済新聞</title>
+<title>ことぶき見出しことぶき見出し:日本経済新聞</title>
 <style>
 @font-face{
     font-family:nkds;
@@ -48,24 +48,7 @@
 <link rel="stylesheet" type="text/css" href="./article_files/layout.common.css" media="screen,tv,projection,print"><link rel="stylesheet" type="text/css" href="./article_files/layout.module.master.css" media="screen,tv,projection,print"><link rel="stylesheet" type="text/css" href="./article_files/layout.subpage.master.css" media="screen,tv,projection,print"><link rel="stylesheet" type="text/css" href="./article_files/layout.module.optin.css" media="screen,tv,projection,print">
 
 </head>
-<body class="" data-rn-inview-track-initialized="true" data-rn-track-initialized="true">
-
-			<div class="bs-advertise">
-			<div id="ADVERTISE_BANNER">
-				<div>
-				</div>
-			</div>
-		</div>
-		<div class="l-advertise" id="js-advertise">
-			<div class="l-advertise_body">
-				<script type="text/javascript">
-				    try{
-				        TagProvider.requestAds({sectionId: 1593, dmp: true, sync: false});
-				    }catch(err){}
-				</script>
-				<div id="2127_1593" data-default-display="" style="display: none;"><iframe width="980" height="90" style="border:none;width:980px;height:90px;" frameborder="0" scrolling="no" name="fif_slot__2127_1593" id="fif_slot__2127_1593" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent;margin:0%;&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" src="./article_files/saved_resource.html"></iframe></div>
-			</div>
-		</div>
+<body>
 	<div id="PAGE_TOP">
     <div class="subpage-header ">
     <div class="subpage-header__inner">
@@ -129,67 +112,9 @@
          <a href="javascript:void(0)" class="subpage-user-menu__logout-button" onclick="_nk.logoutWithKite(&#39;https://regist.nikkei.com/ds/etc/accounts/logout?pxep=https%3A%2F%2Fwww.nikkei.com%2F&#39;, &#39;https://www.nikkei.com/logout&#39;); return false"><span>ログアウト</span></a></div>
 
 </div>
-    <script>
-	//銀鍵記事閲覧本数取得
-	function reload(sUrl) {
-		if(sUrl === undefined){
-			return;
-		}
-		var $UserMenuEtsuranhonsu;
-		$UserMenuEtsuranhonsu = $('#JSID_UserMenu').find('.JSID_etsuranhonsuPopupHTML');
-		_nk.getAsync({
-			url: sUrl,
-			json: true,
-			type: "get",
-			callback: function(oJson, sStatus) {
-				if (sStatus == _nk.RES_SUCCESS) {
-					if (oJson.html == "") {
-						return;
-					}
-					// 正常応答時はHTMLを表示
-					$UserMenuEtsuranhonsu.html(oJson.html);
-				}
-			}
-		});
-	};
-	$(document).ready(function(){
-		var eventSelector = '.js-subpage-user-menu';
-		var $menberBtn = $(eventSelector + ':not(.subpage-user-menu)');
-		var $userMenu = $('.subpage-user-menu');
-		var class_show = 'subpage-user-menu--show';
-		var class_hide = 'subpage-user-menu--hide';
-		$menberBtn.click(function(e){
-			e.preventDefault();
-			if(!$userMenu.hasClass(class_show)){
-				$userMenu.addClass(class_show).removeClass(class_hide);
-				reload('');
-			}else{
-				$userMenu.removeClass(class_show).addClass(class_hide);
-			}
-		});
-		$(document).click(function(e) {
-			if(!$(e.target).closest(eventSelector).length){
-				if($userMenu.hasClass(class_show)){
-					$userMenu.removeClass(class_show).addClass(class_hide);
-				}
-			}
-		});
-	});
-</script>
     </div>
 </div>
 
-<style type="text/css">
-    <!--
-    [type="search"]::-webkit-search-cancel-button,
-    [type="search"]::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
-    [type="search"]::-ms-clear {
-    visibility:hidden
-    }
-    -->
-</style>
 <div class="subpage-gnav ">
     <div class="subpage-gnav__inner">
         <ul class="subpage-gnav__list">
@@ -703,83 +628,7 @@
         </script>
     </div>
 </div>
-<script>
-var ua = navigator.userAgent;
-var is_sp = (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0);
-if(is_sp) {
-    var $naviLink = $('.subpage-gnav__listitem > a');
-    window.hrefList = [];
-    $naviLink.each(function() {
-        window.hrefList.push($(this).attr('href'));
-        $(this)
-            .attr('href', 'javascript:void(0)');
-    });
-    $('.subpage-gnav-sublist__item > a').each(function() {
-       var $innerLink = $(this);
-       $innerLink
-           .css('display', 'block');
-       if($innerLink.attr('target')) {
-           $innerLink
-               .removeAttr('target');
-       }
-    });
-    var clickCnt = 0, targetIndexTmp = -1, menuHeight = 0;
-    $naviLink.click(function() {
-        var $this = $(this);
-        $naviLink.each(function() {
-            $(this)
-                .parent()
-                .removeClass('js-subpage-gnav__listitem--current')
-                .find('.subpage-gnav__sub')
-                .css({'opacity': 0, 'overflow': 'hidden'});
-        });
-        if(targetIndexTmp !== $naviLink.index(this)) {
-            clickCnt = 0;
-        }
-        targetIndexTmp = $naviLink.index(this);
-        $this
-            .data('click', ++clickCnt)
-            .parent()
-            .addClass('js-subpage-gnav__listitem--current')
-            .find('.subpage-gnav__sub')
-            .css({'opacity': 1, 'overflow': 'initial'});
-        if($this.data('click') === 2 || $naviLink.index(this) === 12) {
-            $this.data('click', 0);
-            location.href = window.hrefList[$naviLink.index(this)];
-        } else if($('.l-proTimeline_inner').length > 0) {
-            $('body')
-                .css('zoom', 1.001);
-            var ti = setInterval(function() {
-                $('body')
-                    .css('zoom', 1);
-                clearInterval(ti);
-            }, 20);
-        }
-    });
-} else {
-    $('.subpage-gnav__listitem').filter('.noMenu').hover(function(){ $(this).addClass('js-subpage-gnav__listitem--current'); }, function(){ $(this).removeClass('js-subpage-gnav__listitem--current'); });
-    var $menu = $('.subpage-gnav__listitem').not('.noMenu');
-    
-    var $menu_hovered;
-    $menu.mouseenter(function(e){
-        var $this = $(this);
-        $menu_hovered = $this;
-        if($this.data('leavetimer')){
-            clearInterval($this.data('leavetimer'));
-            $this.data('leavetimer', null);
-        }
-        if($menu.hasClass('js-subpage-gnav__listitem--current') == false){
-            $this.addClass('js-subpage-gnav__listitem--current');
-        }
-    }).mouseleave(function(e){
-        var $this = $(this);
-        $menu_hovered = null;
-        $this.data('leavetimer', setTimeout(function(obj){ obj.removeClass('js-subpage-gnav__listitem--current'); if($menu_hovered) $menu_hovered.trigger('mouseenter'); }, 0, $this));
-    });
-}
-</script>
-<script>
-    </script><div id="JSID_key_popupBody" style="display:none;"></div><div id="CONTENTS">
+<div id="JSID_key_popupBody" style="display:none;"></div><div id="CONTENTS">
         <div id="CONTENTS_BODY">
             <div id="CONTENTS_OUTER">
                 <div id="CONTENTS_INNER" class="cmn-clearfix">
@@ -814,7 +663,7 @@ _nkconf.ID_BREAKINGNEWS.push([["JSID_baseBreaking_small",{"JSID_dataBreaking_Kij
 </div>
 	<div class="cmn-section cmn-indent ">
 		<h1 class="cmn-article_title cmn-clearfix" itemprop="headline">
-	<span class="cmnc-middle JSID_key_fonthln m-streamer_medium">内閣支持46%、不支持47%で拮抗　日経世論調査</span>
+	<span class="cmnc-middle JSID_key_fonthln m-streamer_medium" style="font-size:190% !important;">ことぶき見出しことぶき見出しことぶき見出し</span>
 		<span class="cmnc-small JSID_key_fonttxt m-streamer_medium"></span>
 		<br>
 	<span class="cmnc-small JSID_key_fonttxt m-streamer_medium"></span>
@@ -822,9 +671,7 @@ _nkconf.ID_BREAKINGNEWS.push([["JSID_baseBreaking_small",{"JSID_dataBreaking_Kij
 <dl class="cmn-article_topics cmn-clearfix">
 
     <dd class="cmnc-tag">
-                        <a href="https://www.nikkei.com/politics/politics/?n_cid=ds_under_title">政治</a></dd>
-                    <dd class="cmnc-tag">
-                        <a href="https://www.nikkei.com/politics/public-opinion-survey/?n_cid=ds_under_title">世論調査</a></dd>
+                        <a href="https://www.nikkei.com/politics/politics/?n_cid=ds_under_title">人事</a></dd>
                     </dl>
 
 <dl class="cmn-article_status cmn-clearfix">
@@ -979,8 +826,32 @@ COMEMOについて→https://comemo.nikkei.com/"><span class="m-wficon note"></s
 		}
 		</script>
 		<div id="JSID_everStart" onclick="enDispChange();"></div>
-	<div id="JSID_articleTextDef" class="cmn-article_text a-cf JSID_key_fonttxt m-streamer_medium">
-<p>日本経済新聞社とテレビ東京による21～23日の世論調査で安倍内閣の支持率は46%で、1月の前回調査の48%からほぼ横ばいだった。不支持率も前回の45%からほぼ横ばいの47%で支持・不支持が拮抗した。不支持率が支持率を上回ったのは2018年7月以来、1年7カ月ぶりになる。</p><p></p><div class="cmn-photo_style2 cmn-position_center" style="width:450px"><div style="cmnc-figure"><img height="234" width="450" alt="" src="./article_files/https___imgix-proxy.n8s.jp_DSXMZO5599023023022020MM8001-PN1-4.jpg"></div><p></p></div><p></p><p>安倍内閣を「支持する」と答えた人を世代別で見ると18～39歳が52%、40～50歳代は47%、60歳以上は43%で、若い世代ほど支持が多かった。男女別に見ると男性は前回から4ポイント減って50%、女性は前回と横ばいの39%だった。</p><p>首相主催の「桜を見る会」をめぐる一連の問題について、政府の説明に「納得できない」と答えた人は76%だった。「納得できる」と答えた人は14%にとどまった。「納得できない」と答えた人は内閣支持層でも59%に上り、不支持層では93%に達した。自民党支持層でも6割を超えた。</p><p>内閣を支持する理由を複数回答で聞くと、最も多かったのは「安定感がある」で38%だったが、前回調査に比べて7ポイント低下した。「自民党中心の内閣だから」が3ポイント増の28%、「国際感覚がある」が8ポイント減の26%で続いた。支持しない理由（複数回答）の最多は「人柄が信頼できない」の50%だった。50%を超えたのは18年10月以来になる。</p><p>憲法改正に向けて各党が国会で具体的な議論をすべきかどうかを聞くと「議論すべきだ」と答えたのは前回調査の73%からほぼ横ばいの75%で「議論する必要はない」は4ポイント下がり18%だった。「議論すべきだ」と答えた人は内閣支持層で83%、不支持層でも67%に上った。</p><p>どの政党を支持するかを聞くと、自民党と答えた人が最も多い39%だった。前回調査からは6ポイント減った。野党第1党の立憲民主党は前回の10%から横ばいの9%で続いた。特定の支持政党を持たない無党派層は4ポイント増の34%だった。</p><p>調査は日経リサーチが2月21～23日に全国の18歳以上の男女に携帯電話も含めて乱数番号（RDD方式）による電話で実施し、1012件の回答を得た。回答率は43.3%。</p></div>
+	<div id="JSID_articleTextDef" class="cmn-article_text a-cf JSID_key_fonttxt m-streamer_medium" style="font-size:130% !important;">
+<p>松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面松岡克紀さんの文面</p>
+<p><span class="cmn-editable_bold">■ 関係者からの祝意のコメント</span></p>
+<div class="cmn-photo_style2 cmn-position_center" style="width:450px">
+    <div style="cmnc-figure"><img src="./images/umemura.png"></div>
+</div>
+<p>大谷君　ご結婚おめでとうございます！<br>
+上司や先輩からの急な飲みの誘いに対しても「YES！ or はい！」で応えるあなたの姿勢は今後、奥様に対しても是非実践すべきことです。<br>
+その方が何かとうまくいきます。えぇ。これからもお幸せに！
+</p>
+<p>梅村</p>
+<div class="cmn-photo_style2 cmn-position_center" style="width:450px">
+    <div style="cmnc-figure"><img src="./images/kawai.png"></div>
+</div>
+
+<p>大谷くんは、昨年４月にデジタルセクションに異動してきた「ひよっこ」の一人です。そのため、初めは「おばかさん」かなぁと思うこともあったのですが、実は「地頭」がとてもいいです。ただ、現在オークラさんのタイアップ企画を一緒に進めていますから、今回の式場が八芳園だったことがとても残念。オークラさんの式場にアキがなかったのでしょうね。きっと。来年の結婚１周年には、ぜひオークラさんの「ヌーヴェル・エポック」でフレンチをお楽しみください。</p>
+<p>川合</p>
+
+<p><span class="cmn-editable_bold">■ 大谷さんの人柄</span></p>
+<p><span class="cmn-editable_bold">■ 祝意のページ</span></p>
+<p><span class="cmn-editable_bold">■ 主賓まとめ</span></p>
+<p><span class="cmn-editable_bold">■ QRコードお知らせ</span></p>
+
+
+
+</div>
 <div class="m-usefulToolsPulldown">
 	<div class="m-usefulToolsPulldown-pulldown m-usefulToolsPulldown-pulldown-top a-cf" id="JSID_formKIJIToolBottom_snspulldown" style="display: none; z-index : 1;">
 		<div class="tool_box">
