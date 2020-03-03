@@ -3105,21 +3105,36 @@
 			</div>
 		</nav>
 	</header>
-	<kite-breaking-news class="k-breaking-news k-breaking-news--hide" id="breaking">
+	<kite-breaking-news class="k-breaking-news" id="breaking">
 		<div id="breaking-news" class="k-breaking-news__body"><strong
-				class="k-breaking-news__text k-breaking-news__text--middle" data-k-breaking-news-text=""><a href="./top_kekkon.html">大谷様へのメッセージが届いています</a></strong><time
-				class="k-breaking-news__time k-breaking-news__time--hide" datetime=""
-				data-k-breaking-news-time="">10:00</time></div>
+				class="k-breaking-news__text k-breaking-news__text--middle" data-k-breaking-news-text=""><a href="./top_kekkon.html">大谷様へのメッセージが届いています</a></strong></div>
 	</kite-breaking-news>
 	<style>
+		#breaking {
+			transition: all 0.5s ease-in-out;
+			height: 0px;
+			overflow: hidden;
+
+
+		}
+		#breaking a {
+			font-size:320%;
+				-webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
+		}
 		#breaking a:link,
 		#breaking a:visited {
 			text-decoration: none;
-			color: #fff;
+			color: #f00;
 		}
 		#breaking a:hover {
 			text-decoration: underline;
-			color: #fff;
+			color: #f00;
+		}
+		#breaking.k-breaking-news--height {
+			height: 120px;
+							background-image: linear-gradient(to left,#fff 50%,#f33 50%);
+	background-size: 80px 80px;
 		}
 	</style>
 	<script>
@@ -3127,7 +3142,8 @@ document.addEventListener('keydown', logKey);
 
 function logKey(e) {
 	if(e.code == "KeyB"){
-		document.getElementById("breaking").classList.remove("k-breaking-news--hide")
+		document.getElementById("breaking").style.display = "block";
+		document.getElementById("breaking").classList.add("k-breaking-news--height")
 	}
 }
 	</script>
