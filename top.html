@@ -3111,30 +3111,29 @@
 	</kite-breaking-news>
 	<style>
 		#breaking {
-			transition: all 0.5s ease-in-out;
-			height: 0px;
-			overflow: hidden;
 
-
+			background: repeating-linear-gradient(
+				90deg,     /* 角度の指定 */
+				#fff,      /* 色A ... 開始 */
+				#fff 20px,  /* 色A ... 終了 */
+				#f00 20px,      /* 色B ... 開始 */
+				#f00 40px   /* 色B ... 終了 */
+			);
 		}
 		#breaking a {
-			font-size:320%;
-				-webkit-text-stroke: 2px #fff;
-  text-stroke: 2px #fff;
+			font-size: 320%;
+			-webkit-text-stroke: 2px #FFF;
+  			text-stroke: 2px #FFF;
 		}
 		#breaking a:link,
 		#breaking a:visited {
 			text-decoration: none;
-			color: #f00;
+
+			color: #333;
 		}
 		#breaking a:hover {
 			text-decoration: underline;
-			color: #f00;
-		}
-		#breaking.k-breaking-news--height {
-			height: 120px;
-							background-image: linear-gradient(to left,#fff 50%,#f33 50%);
-	background-size: 80px 80px;
+			color: #333;
 		}
 	</style>
 	<script>
@@ -3272,10 +3271,9 @@ function logKey(e) {
 											</div>
 										</div>
 									</div>
-									<div class="k-ad k-ad__text k-ad--desktop" data-kad="" data-kad-force-iframe=""
-										data-kad-id="4987_6765" data-kad-viewable="">
-										<div><a href="https://nkis.nikkei.com/pub_click/174/cERaxl3O72XdJJVOdkSVNvRcu0NVhIPVWh7JR0jIuP6FLGG-qeZWSpx5ih-1-3GLC2Xx5noqP-y9OjeHJH0kBBsrl6bROq1r748engFDcTqAKfduhZyyD8ADbJDtlJd-_rszkZNCux9RyVR04Hdnt_h_9dYIV8Y4al258OEfNXSq4t8Be5YkPZft8XuQGsCfoziTpJKWn3_b-cGJl4ozg3WnEr-nK2LWfBbCEeJzFQiovJ-unREnjTIl0jHyBa0-leA-BpYV8uZ1V3wMQvjW4UTwN8bqm6wjsbuk9Xs98g1IbHNrhkjAFDWO8fcddz-Goqs6gBU5FHXJx5n_CRbFgj55QBmFPNEqXDtK7X9WK69o2bb2ZhUM6Q98HGySEhGMcibG7vZwWKz6E1Tf7b2gpMYoYB7HZ7E4AWW5Iep5P5WgAghrV-rI3fPgMUs//"
-												target="_blank" rel="noopener">一橋大学教授 楠木建氏が登壇！3月23日開催／日経電子版ビジネスフォーラム</a>
+									<div class="k-ad k-ad__text k-ad--desktop">
+										<div><a href="https://ps.nikkei.co.jp/okuratokyo0919/vol1.html"
+												target="_blank" rel="noopener">新しさの中にもノスタルジー漂う料理を／ホテルオークラ</a>
 										</div>
 									</div>
 								</div>
@@ -4314,14 +4312,8 @@ function logKey(e) {
 								</div>
 							</div>
 						</div>
-						<div class="k-hub-layout__container k-hub-layout__container--mpu k-rtoaster__avoid k-ad k-ad__mpu k-ad--desktop"
-							data-kad="" data-kad-force-iframe="" data-kad-id="4984_6763">
-							<div id="4984_6763">
-								<script src="./top_files/imp" charset="UTF-8"></script><iframe width="300"
-									height="250" style="border: none; width: 300px; height: 250px; display: none;"
-									frameborder="0" scrolling="no" name="fif_slot__4984_6763" id="fif_slot__4984_6763"
-									src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent;margin:0%;&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;"
-									src="./top_files/saved_resource(3).html"></iframe></div>
+						<div class="k-hub-layout__container k-hub-layout__container--mpu k-rtoaster__avoid k-ad k-ad__mpu k-ad--desktop">
+							<img src="./images/banner.png" alt="">
 						</div>
 						<div class="k-hub-layout__container--sokuho k-hub-layout__container k-hub-header-link"
 							data-section-id="sokuho" data-rn-inview-track="hub-sokuho">
