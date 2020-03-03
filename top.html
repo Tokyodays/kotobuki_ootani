@@ -3105,46 +3105,52 @@
 			</div>
 		</nav>
 	</header>
-	<kite-breaking-news class="k-breaking-news" id="breaking">
+	<kite-breaking-news class="k-breaking-news k-breaking-news--hide" id="breaking">
 		<div id="breaking-news" class="k-breaking-news__body"><strong
-				class="k-breaking-news__text k-breaking-news__text--middle" data-k-breaking-news-text=""><a href="./top_kekkon.html">大谷様へのメッセージが届いています</a></strong></div>
-	</kite-breaking-news>
-	<style>
+				class="k-breaking-news__text k-breaking-news__text--middle" data-k-breaking-news-text=""><a
+					href="./top_kekkon.html">大谷様へのメッセージが届いています</a></strong><time
+				class="k-breaking-news__time k-breaking-news__time--hide" datetime=""
+				data-k-breaking-news-time="">10:00</time></div>
+	</kite-breaking-news>	<style>
 		#breaking {
-
-			background: repeating-linear-gradient(
-				90deg,     /* 角度の指定 */
-				#fff,      /* 色A ... 開始 */
-				#fff 20px,  /* 色A ... 終了 */
-				#f00 20px,      /* 色B ... 開始 */
-				#f00 40px   /* 色B ... 終了 */
-			);
+			background: repeating-linear-gradient(90deg,
+					/* 角度の指定 */
+					#fff,
+					/* 色A ... 開始 */
+					#fff 30px,
+					/* 色A ... 終了 */
+					#f00 30px,
+					/* 色B ... 開始 */
+					#f00 60px
+					/* 色B ... 終了 */
+				);
 		}
+	
 		#breaking a {
 			font-size: 320%;
 			-webkit-text-stroke: 2px #FFF;
-  			text-stroke: 2px #FFF;
+			text-stroke: 2px #FFF;
 		}
+	
 		#breaking a:link,
 		#breaking a:visited {
 			text-decoration: none;
-
 			color: #333;
 		}
+	
 		#breaking a:hover {
 			text-decoration: underline;
 			color: #333;
 		}
 	</style>
 	<script>
-document.addEventListener('keydown', logKey);
+		document.addEventListener('keydown', logKey);
 
-function logKey(e) {
-	if(e.code == "KeyB"){
-		document.getElementById("breaking").style.display = "block";
-		document.getElementById("breaking").classList.add("k-breaking-news--height")
-	}
-}
+		function logKey(e) {
+			if (e.code == "KeyB") {
+				document.getElementById("breaking").classList.remove("k-breaking-news--hide")
+			}
+		}
 	</script>
 	<main>
 		<div class="k-ad k-ad__billboard k-ad--desktop" data-kad="" data-kad-force-iframe="" data-kad-id="4983_6763">
