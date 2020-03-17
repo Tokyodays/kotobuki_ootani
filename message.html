@@ -13,23 +13,44 @@
 <script type="text/javascript" src="staffroll.js"></script>
 <script type="text/javascript">
 $(function(){
-	$('#staffRoll').staffRoll({
+    $('#staffRoll').hide();
+    $("#start").on("click", function(){
+        $("#hajime").hide();
+
+        $('#staffRoll').show().staffRoll({
         allTime : 6000
-    });
+        });
+        $("#audio").play();
+
+    })
+
 });
 </script>
 </head>
 <body>
     <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio autoplay id="audio">
+    <audio  id="audio">
         <source src="https://tokyodays.github.io/kotobuki_ootani/images/bgm.mp3">
       </audio>
 <h1>彩乃さんメッセージ</h1>
+<div id="hajime" style="position: relative; 
+ display: flex;
+justify-content: center;
+align-items: center;height:100%;">
+    <div class="" style="
 
+    
+    color: white;">
+    <h2>彩乃さんメッセージ</h2>
+    <p style="cursor: pointer;" id="start">クリック</p>
+
+    </div>
+    </div>
 <div id="staffRoll">
 
 <div class="section whole">
 <h2>彩乃さんメッセージ</h2>
+
 </div>
 <div class="section whole">
 <ul>
