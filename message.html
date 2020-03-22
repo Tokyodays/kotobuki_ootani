@@ -18,10 +18,14 @@ $(function(){
         $("#hajime").hide();
 
         $('#staffRoll').show().staffRoll({
-        allTime : 9000
+        allTime : 900
         });
         $("#mp3").get(0).play();
 
+    })
+    $('#carp').on('click', function(){
+        $("#mp3").get(0).pause();
+        $("#carp_bgm").get(0).play();
     })
 
 });
@@ -37,6 +41,9 @@ font-size: 30px;
     <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="mp3">
         <source src="https://tokyodays.github.io/kotobuki_ootani/images/bgm.mp3">
+      </audio>
+      <audio id="carp_bgm">
+        <source src="https://tokyodays.github.io/kotobuki_ootani/images/carp.mp3">
       </audio>
 <h1>彩乃さんからのメッセージ</h1>
 <div id="hajime" style="position: relative; 
@@ -62,7 +69,7 @@ align-items: center;height:100%;">
 <li>出会った頃は、まさかこんな日がくるとは思ってもいませんでした...</li>
 </ul>
 </div>
-<div class="section whole">
+<!-- <div class="section whole">
 <ul>
 <li>色々な所へ出掛け時間を共有するうちに、</li>
 <li>何気ない瞬間で二人の視点が一緒だったり</li>
@@ -109,7 +116,7 @@ align-items: center;height:100%;">
 <li>今後の人生において、楽しいことだけでなく</li>
 <li>困難に直面することもあると思います</li>
 </ul>
-</div>
+</div> -->
 <div class="section whole">
     <ul>
         <li>些細なことでも感謝の気持ちを忘れずに</li>
@@ -119,7 +126,7 @@ align-items: center;height:100%;">
 </div>
 <div class="section whole end">
     <ul>
-        <li><img src="https://tokyodays.github.io/kotobuki_ootani/images/otani2.png"></li>
+        <li id="carp"><img src="https://tokyodays.github.io/kotobuki_ootani/images/otani2.png"></li>
     </ul>
 </div>
 
