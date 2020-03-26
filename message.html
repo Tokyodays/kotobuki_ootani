@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>彩乃さんからのメッセージ</title>
+<title>綾乃さんからのメッセージ</title>
 <base href="https://webdrawer.net/sample/js/staffroll/">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="staffroll.css">
@@ -23,6 +23,10 @@ $(function(){
         $("#mp3").get(0).play();
 
     })
+    $('#carp').on('click', function(){
+        $("#mp3").get(0).pause();
+        $("#carp_bgm").get(0).play();
+    })
 
 });
 </script>
@@ -31,14 +35,17 @@ $(function(){
     <style>
 
         #staffRoll .section ul li {
-font-size: 20px;
+font-size: 30px;
         }
     </style>
     <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="mp3">
         <source src="https://tokyodays.github.io/kotobuki_ootani/images/bgm.mp3">
       </audio>
-<h1>彩乃さんからのメッセージ</h1>
+      <audio id="carp_bgm">
+        <source src="https://tokyodays.github.io/kotobuki_ootani/images/carp.mp3">
+      </audio>
+<h1>綾乃さんからのメッセージ</h1>
 <div id="hajime" style="position: relative; 
  display: flex;
 justify-content: center;
@@ -47,7 +54,7 @@ align-items: center;height:100%;">
 
     
     color: white;">
-    <h2>彩乃さんからのメッセージ</h2>
+    <h2>綾乃さんからのメッセージ</h2>
     <p style="cursor: pointer;" id="start">クリック</p>
 
     </div>
@@ -55,7 +62,7 @@ align-items: center;height:100%;">
 <div id="staffRoll">
 
 <div class="section whole">
-<h2>彩乃さんからのメッセージ</h2>
+<h2>綾乃さんからのメッセージ</h2>
 </div>
 <div class="section whole">
 <ul>
@@ -104,19 +111,25 @@ align-items: center;height:100%;">
         <li>どんな時も側にいて一番の味方でいたいと思っています</li>
     </ul>
 </div>
-<div class="section whole end">
+<div class="section whole">
 <ul>
 <li>今後の人生において、楽しいことだけでなく</li>
 <li>困難に直面することもあると思います</li>
 </ul>
 </div>
-<div class="section whole end">
+<div class="section whole">
     <ul>
         <li>些細なことでも感謝の気持ちを忘れずに</li>
         <li>足りないところを補い合いながら</li>
         <li>乗り越えていける夫婦になりましょう</li>
     </ul>
 </div>
+<div class="section whole end">
+    <ul>
+        <li id="carp" style="cursor:pointer;"><img src="https://tokyodays.github.io/kotobuki_ootani/images/otani2.png"></li>
+    </ul>
+</div>
+
 
 </div>
 
