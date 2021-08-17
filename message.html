@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>綾乃さんからのメッセージ</title>
+<base href="https://webdrawer.net/sample/js/staffroll/">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="staffroll.css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript" src="staffroll.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#staffRoll').hide();
+    $("#start").on("click", function(){
+        $("#hajime").hide();
+
+        $('#staffRoll').show().staffRoll({
+        allTime : 9000
+        });
+        $("#mp3").get(0).play();
+
+    })
+    $('#carp').on('click', function(){
+        $("#mp3").get(0).pause();
+        $("#carp_bgm").get(0).play();
+    })
+
+});
+</script>
+</head>
+<body>
+    <style>
+
+        #staffRoll .section ul li {
+font-size: 30px;
+        }
+    </style>
+    <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id="mp3">
+        <source src="https://tokyodays.github.io/kotobuki_ootani/images/bgm.mp3">
+      </audio>
+      <audio id="carp_bgm">
+        <source src="https://tokyodays.github.io/kotobuki_ootani/images/carp.mp3">
+      </audio>
+<h1>綾乃さんからのメッセージ</h1>
+<div id="hajime" style="position: relative; 
+ display: flex;
+justify-content: center;
+align-items: center;height:100%;">
+    <div class="" style="
+
+    
+    color: white;">
+    <h2>綾乃さんからのメッセージ</h2>
+    <p style="cursor: pointer;" id="start">クリック</p>
+
+    </div>
+    </div>
+<div id="staffRoll">
+
+<div class="section whole">
+<h2>綾乃さんからのメッセージ</h2>
+</div>
+<div class="section whole">
+<ul>
+<li>出会った頃は、まさかこんな日がくるとは思ってもいませんでした...</li>
+</ul>
+</div>
+<div class="section whole">
+<ul>
+<li>色々な所へ出掛け時間を共有するうちに、</li>
+<li>何気ない瞬間で二人の視点が一緒だったり</li>
+</ul>
+</div>
+<div class="section whole">
+    <ul>
+        <li>周囲への接し方や</li>
+        <li>真面目で誠実な人柄に</li>
+        <li>安心感を抱いたのを覚えています</li>
+    </ul>
+</div>
+
+<div class="section whole">
+<ul>
+<li>お父さんをとても尊敬し、ご家族を大切に想う姿が印象的で</li>
+</ul>
+</div>
+<div class="section whole">
+    <ul>
+        <li>今後2人で家庭を築いていくことを想像することができました</li>
+    </ul>
+</div>
+<div class="section whole">
+<ul>
+<li>そんなに美味しくないであろう手料理を、</li>
+<li>何一つ文句を言わず沢山食べてくれて本当に嬉しいです</li>
+</ul>
+</div>
+
+<div class="section whole">
+<ul>
+<li>そして、いつも私の意見を尊重してくれてありがとう</li>
+</ul>
+</div>
+<div class="section whole">
+    <ul>
+        <li>そんな優しさに甘えてばかりいますが</li>
+        <li>どんな時も側にいて一番の味方でいたいと思っています</li>
+    </ul>
+</div>
+<div class="section whole">
+<ul>
+<li>今後の人生において、楽しいことだけでなく</li>
+<li>困難に直面することもあると思います</li>
+</ul>
+</div>
+<div class="section whole">
+    <ul>
+        <li>些細なことでも感謝の気持ちを忘れずに</li>
+        <li>足りないところを補い合いながら</li>
+        <li>乗り越えていける夫婦になりましょう</li>
+    </ul>
+</div>
+<div class="section whole end">
+    <ul>
+        <li id="carp" style="cursor:pointer;"><img src="https://tokyodays.github.io/kotobuki_ootani/images/otani2.png"></li>
+    </ul>
+</div>
+
+
+</div>
+
+</body>
+</html>
